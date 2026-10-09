@@ -10,7 +10,8 @@ def extrair_dados(nome: str, marcador_data: str, separador: str = " - "):
 
     sep = re.escape(separador)
     padrao = (
-        r"^\d+_(?P<escritorio>.+?)"
+        r"^(?P<codigo>\d+)_" 
+        + r"(?P<escritorio>.+?)"
         + sep
         + r"(?:.*?"
         + sep
@@ -28,13 +29,14 @@ def extrair_dados(nome: str, marcador_data: str, separador: str = " - "):
         texto = re.sub(r'[<>:"/\\|?*]', "_", texto.strip())
         return re.sub(r"\s+", "_", texto).strip(" ._")
 
+    codigo = normalizar_parte(resultado.group("codigo"))
     escritorio = normalizar_parte(resultado.group("escritorio"))
     empreendimento = normalizar_parte(resultado.group("empreendimento"))
-    if not escritorio or not empreendimento:
-        raise ValueError(f"Escritório ou empreendimento vazio no nome: {nome}")
+    if not codigo or not escritorio or not empreendimento:
+        raise ValueError(f"Código, escritório ou empreendimento vazios no nome: {nome}")
     data = resultado.group("data")
 
-    return f"{escritorio}_{empreendimento}_{data}"
+    return f"{codigo}_{escritorio}_{empreendimento}_{data}"
 
 def renomear_arquivos(pasta_entrada: str, separador: str, marcador_data: str, aplicar: bool):
     pasta = pathlib.Path(pasta_entrada)
