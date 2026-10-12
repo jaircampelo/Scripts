@@ -7,6 +7,8 @@ Scripts para tarefas automáticas executadas na linha de comando. Cada automaç�
 | Comando | Pasta | O que faz |
 |---|---|---|
 | `juntar-pdf` | [`juntar_pdf/`](juntar_pdf/README.md) | Junta vários PDFs de uma pasta em um único arquivo |
+| `renomear-lote` | [`renomear_lote/`](renomear_lote/README.md) | Renomeia arquivos em lote com base em um padrão |
+| `organizar-pasta` | [`organizar_pasta/`](organizar_pasta/README.md) | Organiza arquivos de Downloads em subpastas por categoria |
 
 ## Estrutura
 
