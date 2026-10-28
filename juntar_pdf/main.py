@@ -78,7 +78,7 @@ def juntar_pdfs(pasta_entrada: str, arquivo_saida: str):
     print(f'PDF gerado com sucesso: {arquivo_saida}')
 
 def main():
-    parser = argparse.ArgumentParser(description="Junta arquivos PDF em um único arquivo.")
+    parser = argparse.ArgumentParser(prog="juntar-pdf", description="Junta arquivos PDF em um único arquivo.")
     parser.add_argument("-i", "--input", default="arquivos", help="Pasta onde estão os PDFs (padrão: arquivos).")
     parser.add_argument("-o", "--output", default="merged.pdf", help="Nome do PDF gerado ou pasta de saída. Ex: 'merged.pdf', 'arquivos/saida'")
     parser.add_argument("-g", "--agrupar", nargs="+", metavar="PREFIXO", help="Prefixos a agrupar, na ordem da junção. Ex: -g nf_ boleto_")

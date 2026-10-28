@@ -32,7 +32,7 @@ def organizar_pasta(pasta: str):
                 shutil.move(str(arquivo), str(destino))
 
 def main():
-    parser = ArgumentParser(description="Organizar arquivos em subpastas por tipo.")
+    parser = ArgumentParser(prog="organizar-pasta", description="Organizar arquivos em subpastas por tipo.")
     parser.add_argument("pasta", default=Path.home().joinpath("Downloads"), help="Caminho da pasta a ser organizada.")
     args = parser.parse_args()
     organizar_pasta(args.pasta)

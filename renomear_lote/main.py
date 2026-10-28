@@ -84,7 +84,7 @@ def renomear_arquivos(pasta_entrada: str, separador: str, marcador_data: str, ap
         except OSError as erro:
             print(f"Falha ao renomear {arquivo.name}: {erro}")
 def main():
-    parser = argparse.ArgumentParser(description="Renomeia arquivos em lote.")
+    parser = argparse.ArgumentParser(prog="renomear-lote", description="Renomeia arquivos em lote.")
     parser.add_argument("-i", "--input", default="arquivos", help="Pasta onde estão os arquivos a serem renomeados.")
     parser.add_argument("-s", "--separador", default=" - ", help="Separador usado nos nomes dos arquivos.")
     parser.add_argument("-d", "--marcador-data", default="vencimento em", help="Marcador que aparece antes da data.")

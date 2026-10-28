@@ -6,11 +6,14 @@ Scripts para tarefas automáticas executadas na linha de comando. Cada automaç�
 
 | Comando | Pasta | O que faz |
 |---|---|---|
+| `scripts` | [`listar_scripts/`](listar_scripts/README.md) | Lista os scripts disponíveis e suas descrições |
 | `juntar-pdf` | [`juntar_pdf/`](juntar_pdf/README.md) | Junta vários PDFs de uma pasta em um único arquivo |
 | `renomear-lote` | [`renomear_lote/`](renomear_lote/README.md) | Renomeia arquivos em lote com base em um padrão |
 | `organizar-pasta` | [`organizar_pasta/`](organizar_pasta/README.md) | Organiza arquivos de Downloads em subpastas por categoria |
 
 ## Estrutura
+
+Para consultar os comandos instalados no terminal, execute `scripts`.
 
 ```
 Scripts/
@@ -115,6 +118,7 @@ packages = ["juntar_pdf", "nova_automacao"]
 
 5. Instale novamente: `uv tool install --editable . --force`.
 6. Crie um `README.md` na pasta da automação e adicione uma linha na tabela acima.
+7. Inclua uma descrição no primeiro parágrafo e exemplos em blocos de código no README da automação. O comando `scripts` descobre os comandos instalados automaticamente; `scripts -h NOME` mostra a ajuda do próprio comando e os exemplos do README.
 
 ## Dependências
 
