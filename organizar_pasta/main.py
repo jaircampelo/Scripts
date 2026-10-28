@@ -7,13 +7,13 @@ import shutil
 # Mover os arquivos para as subpastas correspondentes
 
 FILE_TYPES = {
-    "imagens": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff"],
+    "imagens": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".svg"],
     "documentos": [".pdf", ".doc", ".docx", ".txt", ".xls", ".xlsx", ".ppt", ".pptx", ".md"],
     "executaveis": [".exe", ".msi", ".bat", ".sh"],
     "videos": [".mp4", ".avi", ".mov", ".mkv", ".flv"],
     "comprimidos": [".zip", ".rar", ".tar", ".gz", ".7z"],
     "audios": [".mp3", ".wav", ".aac", ".flac", ".ogg"],
-    "codigo": [".py", ".java", ".c", ".cpp", ".js", ".html", ".css", ".php", ".rb"],
+    "codigo": [".py", ".java", ".c", ".cpp", ".js", ".html", ".css", ".php", ".rb", ".ipynb"],
 }
 
 def organizar_pasta(pasta: str):
