@@ -8,7 +8,7 @@ import shutil
 
 FILE_TYPES = {
     "imagens": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".svg"],
-    "documentos": [".pdf", ".doc", ".docx", ".txt", ".xls", ".xlsx", ".ppt", ".pptx", ".md"],
+    "documentos": [".pdf", ".doc", ".docx", ".txt", ".xls", ".xlsx", ".ppt", ".pptx", ".md", ".csv"],
     "executaveis": [".exe", ".msi", ".bat", ".sh"],
     "videos": [".mp4", ".avi", ".mov", ".mkv", ".flv"],
     "comprimidos": [".zip", ".rar", ".tar", ".gz", ".7z"],
